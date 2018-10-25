@@ -8,5 +8,11 @@ namespace RPSLS
 {
     public class ComputerPlayer : Player
     {
+        public override void ChooseGesture()
+        {
+            Random randomNumberGenerator = new Random();
+            int randomNumber = randomNumberGenerator.Next(gestureOptions.Count);
+            
+        }
     }
 }
