@@ -37,109 +37,204 @@ namespace RPSLS
         // member method
         public void RunGame()
         {
-
+            while(ScorePlayer1 <3 ||ScorePlayer2 < 3)
+            {
+                Player1.ChooseGesture();
+                Player2.ChooseGesture();
+                Rules(Player1, Player2);
+            }
+            
         }
 
-        public void Rules() // What gesture beats what.
+        public void Rules(Player player1, Player player2) // What gesture beats what.
         {
-            if (Player1.gesture == Player1.gestureOptions[0] && Player2.gesture == Player2.gestureOptions[2])
-            {
-                Console.WriteLine("Rock crushes Scissors");
-            }
+            
+                if (Player1.gesture == Player1.gestureOptions[0] && Player2.gesture == Player2.gestureOptions[2])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Rock crushes Scissors");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[2] && Player2.gesture == Player2.gestureOptions[1]) 
-            {
-                Console.WriteLine("Scissors cuts Paper");
-            }
+                if (Player1.gesture == Player1.gestureOptions[2] && Player2.gesture == Player2.gestureOptions[1])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Scissors cuts Paper");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[1] && Player2.gesture == Player2.gestureOptions[0]) 
-            {
-                Console.WriteLine("Paper covers Rock");
-            }
+                if (Player1.gesture == Player1.gestureOptions[1] && Player2.gesture == Player2.gestureOptions[0])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Paper covers Rock");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[0] && Player2.gesture == Player2.gestureOptions[3])
-            {
-                Console.WriteLine("Rock crushes Lizard");
-            }
+                if (Player1.gesture == Player1.gestureOptions[0] && Player2.gesture == Player2.gestureOptions[3])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Rock crushes Lizard");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[3] && Player2.gesture == Player2.gestureOptions[4]) 
-            {
-                Console.WriteLine("Lizard poisons Spock");
-            }
+                if (Player1.gesture == Player1.gestureOptions[3] && Player2.gesture == Player2.gestureOptions[4])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Lizard poisons Spock");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[4] && Player2.gesture == Player2.gestureOptions[2]) 
-            {
-                Console.WriteLine("Spock smashes Scissors");
-            }
+                if (Player1.gesture == Player1.gestureOptions[4] && Player2.gesture == Player2.gestureOptions[2])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Spock smashes Scissors");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[2] && Player2.gesture == Player2.gestureOptions[3]) 
-            {
-                Console.WriteLine("Scissors decapitates Lizard");
-            }
+                if (Player1.gesture == Player1.gestureOptions[2] && Player2.gesture == Player2.gestureOptions[3])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Scissors decapitates Lizard");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[3] && Player2.gesture == Player2.gestureOptions[1]) 
-            {
-                Console.WriteLine("Lizard eats Paper");
-            }
+                if (Player1.gesture == Player1.gestureOptions[3] && Player2.gesture == Player2.gestureOptions[1])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Lizard eats Paper");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[1] && Player2.gesture == Player2.gestureOptions[4]) 
-            {
-                Console.WriteLine("Paper disproves Spock");
-            }
+                if (Player1.gesture == Player1.gestureOptions[1] && Player2.gesture == Player2.gestureOptions[4])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Paper disproves Spock");
+                }
 
-            if (Player1.gesture == Player1.gestureOptions[4] && Player2.gesture == Player2.gestureOptions[0]) 
-            {
-                Console.WriteLine("Spock vaporizes Rock");
-            }
+                if (Player1.gesture == Player1.gestureOptions[4] && Player2.gesture == Player2.gestureOptions[0])
+                {
+                    ScorePlayer1++;
+                    Console.WriteLine("Player 1 wins! Spock vaporizes Rock");
+                }
 
-            // start of other players if statements
+                // start of player 2 if statements
 
-            if (Player2.gesture == Player2.gestureOptions[0] && Player1.gesture == Player1.gestureOptions[2]) 
-            {
-                Console.WriteLine("Rock crushes Scissors");
-            }
+                if (Player2.gesture == Player2.gestureOptions[0] && Player1.gesture == Player1.gestureOptions[2])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Rock crushes Scissors");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[2] && Player1.gesture == Player1.gestureOptions[1]) 
-            {
-                Console.WriteLine("Scissors cuts Paper");
-            }
+                if (Player2.gesture == Player2.gestureOptions[2] && Player1.gesture == Player1.gestureOptions[1])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Scissors cuts Paper");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[1] && Player1.gesture == Player1.gestureOptions[0])
-            {
-                Console.WriteLine("Paper covers Rock");
-            }
+                if (Player2.gesture == Player2.gestureOptions[1] && Player1.gesture == Player1.gestureOptions[0])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Paper covers Rock");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[0] && Player1.gesture == Player1.gestureOptions[3]) 
-            {
-                Console.WriteLine("Rock crushes Lizard");
-            }
+                if (Player2.gesture == Player2.gestureOptions[0] && Player1.gesture == Player1.gestureOptions[3])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Rock crushes Lizard");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[3] && Player1.gesture == Player1.gestureOptions[4]) 
-            {
-                Console.WriteLine("Lizard poisons Spock");
-            }
+                if (Player2.gesture == Player2.gestureOptions[3] && Player1.gesture == Player1.gestureOptions[4])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Lizard poisons Spock");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[4] && Player1.gesture == Player1.gestureOptions[2]) 
-            {
-                Console.WriteLine("Spock smashes Scissors");
-            }
+                if (Player2.gesture == Player2.gestureOptions[4] && Player1.gesture == Player1.gestureOptions[2])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Spock smashes Scissors");
+                }
 
-            if (Player2.gesture == Player2.gestureOptions[2] && Player1.gesture == Player1.gestureOptions[3]) 
-            {
-                Console.WriteLine("Scissors decapitates Lizard");
-            }
-            if (Player2.gesture == Player2.gestureOptions[3] && Player1.gesture == Player1.gestureOptions[1]) 
-            {
-                Console.WriteLine("Lizard eats Paper");
-            }
-            if (Player2.gesture == Player2.gestureOptions[1] && Player1.gesture == Player1.gestureOptions[4]) 
-            {
-                Console.WriteLine("Paper disproves Spock");
-            }
-            if (Player2.gesture == Player2.gestureOptions[4] && Player1.gesture == Player1.gestureOptions[0]) 
-            { 
-                Console.WriteLine("Spock vaporizes Rock");
-            }
+                if (Player2.gesture == Player2.gestureOptions[2] && Player1.gesture == Player1.gestureOptions[3])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Scissors decapitates Lizard");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[3] && Player1.gesture == Player1.gestureOptions[1])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Lizard eats Paper");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[1] && Player1.gesture == Player1.gestureOptions[4])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Paper disproves Spock");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[4] && Player1.gesture == Player1.gestureOptions[0])
+                {
+                    ScorePlayer2++;
+                    Console.WriteLine("Player 2 wins! Spock vaporizes Rock");
+                }
+
+            // ties for Player1
+
+                if (Player1.gesture == Player1.gestureOptions[0] && Player2.gesture == Player2.gestureOptions[0])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player1.gesture == Player1.gestureOptions[1] && Player2.gesture == Player2.gestureOptions[1])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player1.gesture == Player1.gestureOptions[2] && Player2.gesture == Player2.gestureOptions[2])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player1.gesture == Player1.gestureOptions[3] && Player2.gesture == Player2.gestureOptions[3])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player1.gesture == Player1.gestureOptions[4] && Player2.gesture == Player2.gestureOptions[4])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+
+            
+            // ties for Player2
+
+                if (Player2.gesture == Player2.gestureOptions[0] && Player1.gesture == Player1.gestureOptions[0])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[1] && Player1.gesture == Player1.gestureOptions[1])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[2] && Player1.gesture == Player1.gestureOptions[2])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[3] && Player1.gesture == Player1.gestureOptions[3])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                if (Player2.gesture == Player2.gestureOptions[4] && Player1.gesture == Player1.gestureOptions[4])
+                {
+                    Console.WriteLine("Meh, tie.");
+                }
+
+                
+
+
+
+
+
+
+
 
         }
 
