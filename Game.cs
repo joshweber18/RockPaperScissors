@@ -36,8 +36,11 @@ namespace RPSLS
        
         // member method
         public void RunGame()
-        {
-            while(ScorePlayer1 <3 ||ScorePlayer2 < 3)
+        { 
+            GetPlayers();
+            DeterminePlayers(amountOfPlayers);
+
+            while (ScorePlayer1 < 3 || ScorePlayer2 < 3) 
             {
                 Player1.ChooseGesture();
                 Player2.ChooseGesture();
@@ -226,12 +229,6 @@ namespace RPSLS
                 {
                     Console.WriteLine("Meh, tie.");
                 }
-
-                
-
-
-
-
 
 
 

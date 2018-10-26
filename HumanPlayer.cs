@@ -21,8 +21,33 @@ namespace RPSLS
             Console.WriteLine("Press 3 for " + gestureOptions[2]);
             Console.WriteLine("Press 4 for " + gestureOptions[3]);
             Console.WriteLine("Press 5 for " + gestureOptions[4]);
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    gesture = gestureOptions[0];
+                    break;
+                case "2":
+                    gesture = gestureOptions[1];
+                    break;
+                case "3":
+                    gesture = gestureOptions[2];
+                    break;
+                case "4":
+                    gesture = gestureOptions[3];
+                    break;
+                case "5":
+                    gesture = gestureOptions[4];
+                    break;
+                case "":
+                    Console.WriteLine("you entered a nothing");
+                    ChooseGesture();
+                    break;
+                default:
+                    Console.WriteLine("you dummy");
+                    ChooseGesture();
+                    break;
 
-            gesture = Console.ReadLine();
+            }
         }
     }
 

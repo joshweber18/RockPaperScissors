@@ -1,0 +1,7 @@
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\bin\Debug\RPSLS.exe.config
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\bin\Debug\RPSLS.exe
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\bin\Debug\RPSLS.pdb
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\obj\Debug\RPSLS.exe
+C:\Users\myrht\OneDrive\Documents\DevCode Assignments\RPSLS\RPSLS\obj\Debug\RPSLS.pdb
