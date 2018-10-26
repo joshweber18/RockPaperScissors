@@ -32,21 +32,45 @@ namespace RPSLS
 
 
         // constructor
-        
-       
+
+
         // member method
         public void RunGame()
-        { 
+        {
             GetPlayers();
             DeterminePlayers(amountOfPlayers);
+               while (ScorePlayer1 < 3 && ScorePlayer2 < 3)
+                {
+                    Player1.ChooseGesture();
+                    Player2.ChooseGesture();
+                    Rules(Player1, Player2);
+                }
 
-            while (ScorePlayer1 < 3 || ScorePlayer2 < 3) 
+            if (ScorePlayer1 == 3)
             {
-                Player1.ChooseGesture();
-                Player2.ChooseGesture();
-                Rules(Player1, Player2);
+                Console.Write("Player 1 Wins!");
             }
-            
+
+            else if (ScorePlayer2 == 3)
+            {
+                Console.Write("Player 2 WIns!");
+            }
+        }
+
+        public void EndGame()
+        {
+            Console.WriteLine("Would you like to play again?");
+            string UserInput = Console.ReadLine();
+
+            if (UserInput == "Yes")
+            {
+                RunGame();
+            }
+            else if (UserInput == "No")
+            {
+                Console.WriteLine("Bye!");
+            }
+
         }
 
         public void Rules(Player player1, Player player2) // What gesture beats what.

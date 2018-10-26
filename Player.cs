@@ -21,9 +21,6 @@ namespace RPSLS
             gestureOptions.Add("Spock");
         }
 
-
-
-
         /// constructor
 
         /// member methods(DOES IT)
